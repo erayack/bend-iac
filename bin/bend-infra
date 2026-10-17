@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Compatibility alias for bin/bend-iac (the project's former name).
+exec "$(cd "$(dirname "$0")" && pwd)/bend-iac" "$@"

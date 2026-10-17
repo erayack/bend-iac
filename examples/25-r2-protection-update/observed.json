@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "bend-infra/observed",
+  "source": "fixture",
+  "resources": [
+    {
+      "type": "r2_bucket",
+      "id": "assets",
+      "environment": "staging",
+      "protected": false
+    }
+  ]
+}

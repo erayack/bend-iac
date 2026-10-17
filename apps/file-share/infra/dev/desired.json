@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "kind": "bend-infra/desired",
+  "environments": ["dev"],
+  "resources": [
+    {
+      "type": "d1_database",
+      "id": "db",
+      "environment": "dev",
+      "location": "weur",
+      "readReplication": "disabled",
+      "protected": true
+    },
+    {
+      "type": "r2_bucket",
+      "id": "files",
+      "environment": "dev",
+      "protected": true
+    },
+    {
+      "type": "worker",
+      "id": "api",
+      "environment": "dev",
+      "main": "src/worker.js",
+      "compatibilityDate": "2026-01-01",
+      "bindings": [
+        {
+          "name": "DB",
+          "database": "db"
+        },
+        {
+          "name": "FILES",
+          "bucket": "files"
+        }
+      ]
+    }
+  ]
+}

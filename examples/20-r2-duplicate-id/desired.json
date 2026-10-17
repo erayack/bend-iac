@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "kind": "bend-infra/desired",
+  "environments": ["staging", "production"],
+  "resources": [
+    {
+      "type": "d1_database",
+      "id": "same",
+      "environment": "staging",
+      "location": "enam",
+      "readReplication": "disabled",
+      "protected": false
+    },
+    {
+      "type": "r2_bucket",
+      "id": "same",
+      "environment": "staging",
+      "protected": false
+    },
+    {
+      "type": "worker",
+      "id": "same",
+      "environment": "staging",
+      "main": "worker.js",
+      "compatibilityDate": "2026-01-01",
+      "bindings": []
+    }
+  ]
+}

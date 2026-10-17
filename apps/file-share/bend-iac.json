@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "kind": "bend-iac/project",
+  "project": "file-share",
+  "environments": {
+    "dev": {
+      "spec": "infra/dev"
+    }
+  }
+}

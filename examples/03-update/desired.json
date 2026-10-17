@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "kind": "bend-infra/desired",
+  "environments": ["staging", "production"],
+  "resources": [
+    {
+      "type": "d1_database",
+      "id": "app-db",
+      "environment": "staging",
+      "location": "weur",
+      "readReplication": "auto",
+      "protected": false
+    },
+    {
+      "type": "worker",
+      "id": "api",
+      "environment": "staging",
+      "main": "src/api-v2.ts",
+      "compatibilityDate": "2026-10-01",
+      "bindings": [{ "name": "DB", "database": "app-db" }]
+    }
+  ]
+}

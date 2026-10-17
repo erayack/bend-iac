@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "kind": "bend-infra/approvals",
+  "approvals": [
+    {
+      "action": "delete",
+      "resource": "db",
+      "environment": "dev",
+      "approvedBy": "owner@example.com",
+      "reason": "Retire file-share after deleting its uploaded files"
+    },
+    {
+      "action": "delete",
+      "resource": "files",
+      "environment": "dev",
+      "approvedBy": "owner@example.com",
+      "reason": "Retire file-share after deleting its uploaded files"
+    }
+  ]
+}

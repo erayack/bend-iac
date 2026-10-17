@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "bend-infra/desired",
+  "environments": ["staging", "production"],
+  "resources": [
+    {
+      "type": "r2_bucket",
+      "id": "assets",
+      "environment": "production",
+      "protected": false
+    }
+  ]
+}

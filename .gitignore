@@ -1,0 +1,49 @@
+# Pinned toolchain (Bend checkout, Lean release, BendTT kernel) from
+# scripts/bootstrap.sh. No trailing slash: also matches a .toolchain symlink.
+/.toolchain
+# Build artifacts: planner.mjs, stamps, exported .bendtt
+/.build
+# Live run directories (ledgers, artifacts, journals, Wrangler logs,
+# evidence). Runtime state belongs here, never in tracked paths.
+/.live
+# Local agent/session state
+/.pi
+
+# Dependencies, caches, coverage, logs, temp files
+node_modules/
+.cache/
+coverage/
+*.lcov
+.nyc_output/
+*.log
+*.tmp
+*.tmp.mjs
+*.swp
+*~
+tmp/
+.wrangler/
+.bend-iac/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets: env files, Wrangler dev vars, keys and certificates
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+id_rsa*
+id_ed25519*
+.npmrc
+credentials.json

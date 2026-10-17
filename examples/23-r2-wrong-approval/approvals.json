@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "bend-infra/approvals",
+  "approvals": [
+    {
+      "action": "delete",
+      "resource": "assets",
+      "environment": "production",
+      "approvedBy": "reviewer@example.com",
+      "reason": "retire fixture storage"
+    }
+  ]
+}

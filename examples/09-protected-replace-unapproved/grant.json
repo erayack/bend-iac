@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "kind": "bend-infra/grant",
+  "environment": "production",
+  "allow": ["create", "update", "delete"]
+}

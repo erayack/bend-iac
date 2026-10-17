@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "bend-infra/approvals",
+  "approvals": [
+    {
+      "action": "delete",
+      "resource": "prod-db",
+      "environment": "production",
+      "approvedBy": "dba@example.com",
+      "reason": "retire the production app"
+    }
+  ]
+}

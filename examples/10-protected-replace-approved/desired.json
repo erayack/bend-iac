@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "bend-infra/desired",
+  "environments": ["staging", "production"],
+  "resources": [
+    {
+      "type": "d1_database",
+      "id": "app-db",
+      "environment": "staging",
+      "location": "weur",
+      "readReplication": "disabled",
+      "protected": false
+    },
+    {
+      "type": "worker",
+      "id": "api",
+      "environment": "staging",
+      "main": "src/api.ts",
+      "compatibilityDate": "2026-09-01",
+      "bindings": [
+        {
+          "name": "DB",
+          "database": "app-db"
+        }
+      ]
+    },
+    {
+      "type": "d1_database",
+      "id": "prod-db",
+      "environment": "production",
+      "location": "weur",
+      "readReplication": "auto",
+      "protected": true
+    },
+    {
+      "type": "worker",
+      "id": "prod-api",
+      "environment": "production",
+      "main": "src/api.ts",
+      "compatibilityDate": "2026-09-01",
+      "bindings": [
+        {
+          "name": "DB",
+          "database": "prod-db"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "file-share-local",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-01-01",
+  "account_id": "0123456789abcdef0123456789abcdef",
+  "workers_dev": false,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "file-share-local-db",
+      "database_id": "11111111-1111-4111-8111-111111111111",
+      "remote": false
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "FILES",
+      "bucket_name": "file-share-local-files",
+      "remote": false
+    }
+  ]
+}

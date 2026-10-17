@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "ignorePatterns": [
+    ".agent/**",
+    ".agents/**",
+    ".claude/**",
+    ".codex/**",
+    ".continue/**",
+    ".cursor/**",
+    ".gemini/**",
+    ".opencode/**",
+    ".pi/**",
+    ".roo/**",
+    ".windsurf/**",
+    ".toolchain/**",
+    ".build/**",
+    ".live/**",
+    ".wrangler/**",
+    "node_modules/**",
+    "tools/oxlint/anti-slop/**",
+    "bun.lock",
+    "*.bend",
+    "*.bendtt",
+    "LAWS.sha256",
+    "toolchain.env",
+    "LICENSE"
+  ]
+}
